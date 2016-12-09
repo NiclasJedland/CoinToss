@@ -16,7 +16,7 @@ namespace CoinToss
 			int max_heads = 0; // Max head count 
 			ulong count = 0;
 
-			while(max_heads < 30)
+			while(max_heads != 30)
 			{
 				count++;
 				if(rnd.Next(0, 2) == 0)
@@ -28,7 +28,7 @@ namespace CoinToss
 					heads = 0;
 				}
 			}
-			Console.WriteLine("Longest streak: {0}\nCount: ~{1}m : {2}k : {3}", max_heads, count/1000000, count/1000, count);
+			Console.WriteLine("Longest streak: {0}\nCount: ~{1}m : {2}k or exact {3}", max_heads, count/1000000, count/1000, count);
 			Console.ReadLine();
 		}
 	}
